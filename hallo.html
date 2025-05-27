@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>APA YA</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background: whitesmoke;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: #333;
+      }
+      .container {
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        width: 90%;
+        max-width: 400px;
+        text-align: center;
+      }
+      input,
+      textarea,
+      button {
+        width: 100%;
+        margin-top: 15px;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+      }
+      button {
+        background: darkblue;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background: black;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Halaman 1 -->
+    <div class="container" id="page1">
+      <h2>Selamat Datang Billa ehehe maaf ya bikin repot kamu aja :)</h2>
+      <p>Masukkan namamu dulu yaa~</p>
+      <input
+        type="text"
+        id="nameInput"
+        placeholder="Masa iyaa lupa sama nama kamu..."
+      />
+      <button onclick="nextPage()">LANJUT</button>
+    </div>
+
+    <!-- Halaman 2 -->
+    <div class="container hidden" id="page2">
+      <h2>💌 Pesan untuk <span id="displayName"></span></h2>
+      <p>
+        hallo billa, aku nggk tau mau ngomong apa tapi aku bersyukur aja kamu
+        udah nggk lagi sama dia ehehehe, maaf ya jadi ingetin kamu lagi tapi ada
+        oji disini ehehe, ohya aku mau ngomong aja semangat ya bill jangan
+        nyerah kita dikit lagi lulus jangan aneh aneh yaa kamu jaga diri baik
+        baik, jangan berantem sama qia terus ahaha udah nggk kan ?? atau masih
+        berantem ?? mamah sama ayah gimana kabar nya baikan kan ?? habib gimanaa
+        skrng masih mondok atau udah lulus ?? semoga di sehatkan yaa sekeluarga
+        ehehehe semoga aja nanti kita dipertemukan kembali bill ahahahaha semoga
+        ajaa, terakhir mungkin nnti aku bakalan ngasi ini lagi ehehehe jangan
+        kapok yaa SEMANGAT TERUS BILLA
+      </p>
+      <button onclick="nextPage()">Lanjut</button>
+    </div>
+
+    <!-- Halaman 3 -->
+    <div class="container hidden" id="page3">
+      <h2>📝 Kesan, Pesan & Saran</h2>
+      <textarea
+        id="feedback"
+        rows="5"
+        placeholder="Tulis sesuatu di sini yaa..."
+      ></textarea>
+      <button onclick="sendToWhatsApp()">Kirim ke WhatsApp</button>
+    </div>
+
+    <script>
+      let currentPage = 1;
+
+      function nextPage() {
+        if (currentPage === 1) {
+          const name = document.getElementById("nameInput").value.trim();
+          if (!name) {
+            alert("Namanya diisi dulu dong 😳");
+            return;
+          }
+          document.getElementById("displayName").textContent = name;
+        }
+        document.getElementById(`page${currentPage}`).classList.add("hidden");
+        currentPage++;
+        document
+          .getElementById(`page${currentPage}`)
+          .classList.remove("hidden");
+      }
+
+      function sendToWhatsApp() {
+        const feedback = document.getElementById("feedback").value.trim();
+        const name = document.getElementById("nameInput").value.trim();
+        if (!feedback) {
+          alert("Tulis dulu dong kesan pesannya 😘");
+          return;
+        }
+
+        const phoneNumber = "6282110207042"; // Ganti ke nomor WA kamu
+        const message = `HALLO OJI, INI PESAN DARI ${name} CUKA ahahaha :\n\n"${feedback}"`;
+        const encodedMessage = encodeURIComponent(message);
+        const waLink = `https://wa.me/6282110207042?text=${encodedMessage}`;
+        window.location.href = waLink;
+      }
+    </script>
+  </body>
+</html>

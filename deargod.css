@@ -1,0 +1,180 @@
+body {
+  background-color: rgb(37, 35, 35);
+}
+
+/* kotak pertama */
+.kotak-pertama {
+  border-bottom: 3px solid white;
+  position: relative;
+  padding: 30px 0;
+}
+
+.kotak-pertama img {
+  border-radius: 100px;
+  width: 100px;
+  position: absolute;
+  left: 80px;
+  bottom: 40px;
+}
+
+.kotak-pertama a.spotify {
+  position: absolute;
+  right: 350px;
+  top: 200px;
+}
+
+.kotak-pertama a.yt {
+  position: absolute;
+  right: 500px;
+  top: 200px;
+}
+
+.kotak-pertama h3 {
+  position: absolute;
+  right: 240px;
+  bottom: 130px;
+  color: white;
+}
+
+.kotak-pertama h1 {
+  color: white;
+  margin-left: 210px;
+}
+
+.kotak-pertama h2 {
+  color: white;
+  margin-left: 210px;
+}
+
+a.lyrics {
+  position: absolute;
+  right: 875px;
+  bottom: 35px;
+  color: white;
+  background-color: green;
+  border-radius: 25px;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 15px;
+  margin-left: 5px;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 15px 30px;
+}
+
+a.lyrics:hover {
+  background-color: grey;
+  color: white;
+}
+
+a.Overview {
+  position: absolute;
+  right: 720px;
+  bottom: 35px;
+  background-color: green;
+  color: white;
+  border-radius: 25px;
+  display: inline-block;
+  margin-left: 600px;
+  font-weight: 500px;
+  font-size: 20px;
+  padding: 15px 30px;
+  text-decoration: none;
+}
+
+a.Overview:hover {
+  background-color: grey;
+  color: white;
+}
+
+/* kotak kedua */
+.kotak-kedua {
+  padding-top: 30px;
+}
+
+.kotak-kedua p {
+  margin-left: 110px;
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 20px;
+}
+
+/* kotak ketiga */
+.kotak-ketiga {
+  margin-top: 80px;
+  margin-left: 110px;
+}
+
+.kotak-ketiga h3 {
+  color: white;
+}
+
+span {
+  color: white;
+  font-size: 20px;
+}
+
+/* kotak keempat */
+.kotak-keempat a.see {
+  position: relative;
+  left: 1100px;
+  bottom: 0px;
+  color: white;
+  text-decoration: none;
+  background-color: darkgrey;
+  padding: 10px 100px;
+  border-radius: 15px;
+}
+
+.kotak-keempat a.DL {
+  position: absolute;
+  color: white;
+  right: 50px;
+  bottom: 140px;
+  text-decoration: none;
+  background-color: darkgray;
+  padding: 10px 20px;
+  border-radius: 15px;
+}
+
+.kotak-keempat a.SFA {
+  position: absolute;
+  color: white;
+  right: 210px;
+  bottom: 140px;
+  text-decoration: none;
+  background-color: darkgray;
+  padding: 10px 20px;
+  border-radius: 15px;
+}
+
+.kotak-keempat a.STD {
+  position: absolute;
+  color: white;
+  right: 370px;
+  bottom: 140px;
+  text-decoration: none;
+  background-color: darkgray;
+  padding: 10px 20px;
+  border-radius: 15px;
+}
+
+a.see:hover {
+  background-color: black;
+  color: white;
+}
+
+a.DL:hover {
+  background-color: black;
+  color: white;
+}
+
+a.SFA:hover {
+  background-color: black;
+  color: white;
+}
+
+a.STD:hover {
+  background-color: black;
+  color: white;
+}

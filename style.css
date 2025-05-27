@@ -1,0 +1,29 @@
+body{
+    background-color: black;
+}
+h1{ 
+    color: white;
+}
+img{
+    
+    border-radius: 100px;
+}
+h2 {
+    color: white;
+}
+p{
+    color: white;
+}
+span{
+    color: white;
+}
+button{
+    color: white;
+    background-color: green;
+    border-radius: 3px;
+    display: inline-block;
+}
+button:hover{
+    background-color: white;
+    color: black;
+}
